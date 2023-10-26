@@ -14,7 +14,7 @@ function Employee(name, age, jobTitle) {
 	this.jobTitle = jobTitle;
 }
 
-Employee.prototype = Person.prototype;
+Employee.prototype.__proto__ = Person.prototype;
 
 Employee.prototype.jobGreet = function(){
 	console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`);
