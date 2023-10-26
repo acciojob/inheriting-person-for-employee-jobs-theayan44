@@ -14,11 +14,12 @@ Person.prototype.greet = function(){
 	console.log(`Hello, my name is ${this.name} and I am ${this.age} years old`);
 }
 
+Employee.prototype.__proto__ = Person.prototype;
+
 Employee.prototype.jobGreet = function(){
 	console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}`);
 }
 
-Employee.prototype.__proto__ = Person.prototype;
 
 // Do not change code below this line
 window.Person = Person;
